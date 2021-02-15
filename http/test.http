@@ -1,4 +1,8 @@
-GET http://localhost:8080/test?yn=YES
+GET http://localhost:8080/test?yn=1
+Accept: application/json
+
+###
+GET http://localhost:8080/test?yn=NO
 Accept: application/json
 
 ###

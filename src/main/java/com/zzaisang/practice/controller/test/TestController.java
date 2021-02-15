@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
@@ -13,6 +14,7 @@ import java.util.Optional;
  * @version 0.1.0
  * @since 2021-02-15
  */
+@RestController
 @RequestMapping("/test")
 public class TestController {
 
@@ -20,6 +22,6 @@ public class TestController {
     public ResponseEntity test(@RequestParam(name = "yn", required = false, defaultValue = "NO")YesNo yesNo) {
         System.out.println(yesNo);
 
-        return ResponseEntity.of(Optional.empty());
+        return ResponseEntity.ok().build();
     }
 }
